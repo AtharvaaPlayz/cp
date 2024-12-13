@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cracked Portifolio's</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="editor">
+      <h1>Customize Your Portfolio</h1>
+      <label>Name: <input type="text" id="edit-name" placeholder="Enter Your Name" oninput="updatePreview()"></label>
+      <label>Tagline: <input type="text" id="edit-tagline" placeholder="Your Tagline" oninput="updatePreview()"></label>
+      <label>Profile Picture: <input type="text" id="edit-profile-pic" placeholder="URL of Profile Picture" oninput="updatePreview()"></label>
+      <label>About Me: <textarea id="edit-about-me" placeholder="Tell us about yourself" oninput="updatePreview()"></textarea></label>
+      <label>Skills (comma separated): <input type="text" id="edit-skills" placeholder="Skills" oninput="updatePreview()"></label>
+      <label>Contact Info: <textarea id="edit-contact-info" placeholder="Your Contact Info" oninput="updatePreview()"></textarea></label>
+      <button onclick="generateCode()">Generate Code</button>
+    </div>
+
+    <div class="preview">
+      <h1>Live Portfolio Preview</h1>
+      <div class="portfolio-container" id="portfolio-preview">
+        <div class="portfolio-header">
+          <h1 id="preview-name">Your Name</h1>
+          <p id="preview-tagline">Your Tagline</p>
+        </div>
+        <div class="portfolio-profile">
+          <img id="preview-profile-pic" src="https://via.placeholder.com/150" alt="Profile Picture">
+        </div>
+        <div class="portfolio-about">
+          <h2>About Me</h2>
+          <p id="preview-about-me">Write something about yourself...</p>
+        </div>
+        <div class="portfolio-skills">
+          <h2>Skills</h2>
+          <div id="preview-skills-list"></div>
+        </div>
+        <div class="portfolio-contact">
+          <h2>Contact Info</h2>
+          <p id="preview-contact-info">yourname@example.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="code-output">
+    <h2>Your Portfolio Code</h2>
+    <div class="code-box">
+      <h3>HTML Code</h3>
+      <textarea id="html-output" rows="10" readonly></textarea>
+    </div>
+    <div class="code-box">
+      <h3>CSS Code</h3>
+      <textarea id="css-output" rows="10" readonly></textarea>
+    </div>
+    <div class="code-box">
+      <h3>JavaScript Code</h3>
+      <textarea id="js-output" rows="10" readonly></textarea>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
