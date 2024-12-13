@@ -1,0 +1,144 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto; /* Allow vertical scrolling */
+  background: #0f0f0f;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Ensure the container takes up full width and lets content scroll */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allows for wrapping if the screen is small */
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.editor, .preview {
+  width: 45%;
+  background: linear-gradient(145deg, #0c0c0c, #333);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0, 255, 255, 0.5);
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #00ffd5;
+  text-align: center;
+}
+
+label {
+  font-size: 1rem;
+  color: #00ffd5;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 12px;
+  border: 2px solid #00ffd5;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+button {
+  background: #00ffd5;
+  color: #000;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #03e3b7;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-in-out;
+  padding: 20px;
+}
+
+.portfolio-header h1 {
+  font-size: 2.5rem;
+  color: #00ffd5;
+  text-shadow: 0 0 10px #00ffd5, 0 0 20px #00ffd5;
+}
+
+.portfolio-header p {
+  font-size: 1.2rem;
+  color: #00ffd5;
+  text-shadow: 0 0 5px #00ffd5;
+}
+
+.portfolio-profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #00ffd5;
+  margin: 20px 0;
+}
+
+.portfolio-about, .portfolio-skills, .portfolio-contact {
+  width: 80%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.portfolio-skills span {
+  background: #00ffd5;
+  color: #000;
+  border-radius: 15px;
+  padding: 8px 20px;
+  margin: 10px;
+}
+
+.code-output {
+  width: 90%;
+  background: #111;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+textarea {
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 12px;
+  border-radius: 5px;
+  border: 2px solid #00ffd5;
+  font-family: 'Courier New', monospace;
+  resize: none;
+}
+
+.code-box {
+  margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
